@@ -1,0 +1,17 @@
+{% extends 'templates/base.html' %}
+
+{% block body %}
+
+<h1>Daftar Mahasiswa</h1>
+<ul>
+	{% for item in datas %}
+
+		<li>Nama : {{ item.data.nama }}</li>
+		<!-- <li>Status : {{ item.data.status }}</li>
+		<li>Jenis Kelamin : {{ item.data.jeniskelamin }}</li>
+		<li>Angkatan : {{ item.data.angkatan }}</li>
+		<li>Umur : {{ item.data.umur }}</li> -->
+	{% endfor %}
+</ul>
+
+{% endblock %}

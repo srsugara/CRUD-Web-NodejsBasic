@@ -1,0 +1,22 @@
+{% extends 'templates/base.html' %}
+
+{% block body %}
+
+<h1>Data Mahasiswa </h1>
+<ul>
+	<div class="form-wrapper">
+	<form method="POST" action="/master/mahasiswa/put">
+		<li>Nama : <input type="text" name="nama" value="{{ data.nama }}" placeholder="Nama"></li>
+		<li>Status : <input type="text" name="status" value="{{ data.status }}" placeholder="Status"></li>
+		<li>Jenis Kelamin : <input type="text" name="jeniskelamin" value="{{ data.jeniskelamin }}" placeholder="Jenis Kelamin"></li>
+		<li>Angkatan : <input type="text" name="angkatan" value="{{ data.angkatan }}" placeholder="Angkatan"></li>
+		<li>Umur : <input type="text" name="umur" value="{{ data.umur }}" placeholder="Umur"></li>
+
+		<input type="submit" value="Ubah">
+	</form>
+	<form method="POST" action="/master/mahasiswa/del">
+		<input type="submit" value="Hapus">
+	</from>
+</ul>
+
+{% endblock %}

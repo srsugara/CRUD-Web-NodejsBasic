@@ -1,0 +1,14 @@
+{% extends 'templates/base.html' %}
+
+{% block body %}
+	<h1>Cari mahasiswa</h1>
+	<div class="form-wrapper">
+		<form method="POST" action="/master/mahasiswa/one">
+			<input type="text" name="nama" placeholder="Nama">
+			<br>			
+			<input type="submit" value="Cari">
+		</form>
+		<form method="GET" action="/master/mahasiswa/tambah">		
+			<input type="submit" value="Tambah">
+		</form>
+{% endblock %}
